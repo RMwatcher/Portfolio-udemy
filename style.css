@@ -1,0 +1,123 @@
+/* CSS Variables */
+:root {
+    --background-color: #6c34af;
+    --text-color: #F8F8FF;
+    --secondary-color: #868139;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    font-size: 16px;
+}
+
+#icon {
+    width: 18%;
+    margin-top: 5px;
+}
+
+:is(.cert ul, .social ul, nav ul, .skills ul) {
+    list-style-type: none;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+}
+
+header {
+    position: relative;
+}
+
+#intro {
+    position: absolute;
+    margin: 0 auto;
+}
+
+#profilo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#microsoft {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#microsoft img {
+    margin-bottom: 3%;
+}
+
+:is(.cert img, .projects figure img) {
+    width: 40%;
+}
+
+footer {
+    display: grid;
+    background-color: var(--secondary-color);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 3%;
+}
+
+footer p {
+    margin: auto;
+}
+
+.social ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 0;
+}
+
+/* Mobile Devices */
+@media (min-width: 319px) and (max-width: 600px) {
+    main {
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    .about img {
+        display: block;
+        margin: 5% auto 0 auto;
+    }
+
+    .projects {
+        display: block;
+    }
+
+    .cert {
+        display: block;
+    }
+
+    .cert ul, .skills ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    :is(.cert img, .projects figure img) {
+        width: 60%;
+    }
+
+    .social ul {
+        gap: 7%;
+        margin-bottom: 10%;
+    }
+}
+
+/* Desktops */
+@media (min-width: 601px) {}
