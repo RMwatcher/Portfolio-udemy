@@ -1,8 +1,10 @@
 /* CSS Variables */
 :root {
-    --background-color: #6c34af;
+    --background-color: #2d0062;
     --text-color: #F8F8FF;
     --secondary-color: #868139;
+    --link-color: #d8d5d9;
+    --link-visited-color: #F5E616;
 }
 
 body {
@@ -10,6 +12,19 @@ body {
     color: var(--text-color);
     margin: 0;
     font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1, h2, h3, p, li {
+    font-size: 1.3em;
+}
+
+p, li {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.3;
 }
 
 #icon {
@@ -41,7 +56,15 @@ header {
 
 #intro {
     position: absolute;
-    margin: 0 auto;
+    margin: 0 auto 15% auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 0 3%;
+    font-size: 1.5em;
+}
+
+main {
+    margin: 0 5%;
 }
 
 #profilo {
@@ -49,6 +72,15 @@ header {
     justify-content: center;
     align-items: center;
     width: 100vw;
+}
+
+.projects section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.projects figure img {
+    width: 80%;
 }
 
 #microsoft {
@@ -60,8 +92,8 @@ header {
     margin-bottom: 3%;
 }
 
-:is(.cert img, .projects figure img) {
-    width: 40%;
+:is(.cert img) {
+    width: 50%;
 }
 
 footer {
@@ -70,6 +102,11 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 3%;
+}
+
+#logo {
+    width: 30%;
+    margin: 5% auto 0 auto;
 }
 
 footer p {
@@ -84,8 +121,19 @@ footer p {
     padding: 0;
 }
 
+a:link,
+a:visited {
+    color: var(--link-color);
+}
+
+a:hover,
+a:focus {
+    color: var(--link-visited-color);
+    font-weight: bold;
+}
+
 /* Mobile Devices */
-@media (min-width: 319px) and (max-width: 600px) {
+@media (min-width: 319px) and (max-width: 700px) {
     main {
         padding: 0 5%;
         text-align: center;
@@ -96,8 +144,17 @@ footer p {
         margin: 5% auto 0 auto;
     }
 
-    .projects {
+    #intro {
+        font-size: 1em;
+    }
+
+    .projects section {
         display: block;
+    }
+
+    .projects ul {
+        text-align: left;
+        margin-bottom: 8%;
     }
 
     .cert {
@@ -109,7 +166,11 @@ footer p {
         padding: 0;
     }
 
-    :is(.cert img, .projects figure img) {
+    .projects figure img {
+        width: 90%;
+    }
+
+    :is(.cert img) {
         width: 60%;
     }
 
@@ -118,6 +179,3 @@ footer p {
         margin-bottom: 10%;
     }
 }
-
-/* Desktops */
-@media (min-width: 601px) {}
