@@ -37,20 +37,6 @@ p, li {
     list-style-type: none;
 }
 
-nav {
-    background-color: var(--secondary-color);
-    font-size: 1.2em;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    justify-content: center;
-    gap: 5%;
-    align-items: center;
-}
-
 header {
     position: relative;
 }
